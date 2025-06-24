@@ -26,4 +26,9 @@ describe("Adopet", () => {
     cy.get('input[name="confirm_password"]').type("Joao123");
     cy.contains("button", "Cadastrar").click();
   });
+
+  it("Visite a página de principal do AdoPet e clique no botão ‘Ver pets disponíveis para adoção", () => {
+    cy.visit("https://adopet-frontend-cypress.vercel.app/");
+    cy.contains("a", "Ver pets disponíveis para adoção").click();
+  });
 });
